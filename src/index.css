@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;600;700&family=Space+Grotesk:wght@300;500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Anton", sans-serif;
+  --font-heading: "Space Grotesk", sans-serif;
+  
+  --color-cinema-red: #E50914;
+  --color-cinema-gold: #D4AF37;
+  --color-cinema-black: #080808;
+}
+
+@layer base {
+  body {
+    @apply bg-cinema-black text-white antialiased selection:bg-cinema-red selection:text-white;
+  }
+}
+
+.glitch-text {
+  text-shadow: 2px 0 #ff00c1, -2px 0 #00fff9;
+}
+
+.vhs-grain {
+  background-image: url("https://www.transparenttextures.com/patterns/stardust.png");
+  opacity: 0.05;
+  pointer-events: none;
+}
+
+.parallax-bg {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #080808;
+}
+::-webkit-scrollbar-thumb {
+  background: #E50914;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #b20710;
+}
